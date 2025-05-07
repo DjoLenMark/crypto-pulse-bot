@@ -37,9 +37,11 @@ async def crypto_info(message: types.Message):
             if match in data:
                 price_usd = data[match]['usd']
                 price_rub = data[match]['rub']
-                await message.reply(f"💸 *{name}*
-USD: `${price_usd}`
-RUB: `₽{price_rub}`", parse_mode="Markdown")
+                await message.reply(
+                    f"💸 *{name}*\nUSD: `${price_usd}`\nRUB: `₽{price_rub}`",
+                    parse_mode="Markdown"
+                )
+
             else:
                 await message.reply("❌ Не удалось получить цену.")
 

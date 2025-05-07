@@ -40,7 +40,7 @@ async def forward_ad(message: types.Message):
         return
     await bot.send_message(
         ADMIN_ID,
-        f"📬 Новое рекламное предложение:
+        f"📬 Новое рекламное предложение:"
 
 От @{message.from_user.username or 'Без ника'}
 
